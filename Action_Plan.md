@@ -81,6 +81,7 @@
 
 #### 3.	Low level design
 - ***메시지 정의 (수정요)***
+        
         DWORD WINAPI MatchingThread()
         void CreatGameThread 
         
@@ -130,19 +131,24 @@
 
     + 함수 정의</br>
         송신
-            Recv_Con_dat()      클라이언트 로부터 데이터 소켓을 전달받는 함수
-            Recv_input_data()   클라이언트 로부터 입력 데이터를 받는 함수
-            Recv_check_state()  클라이언트로부터 실시간으로 게임 상태를 확인하도록 요청 받아 확인하는 함수
+            
+                Recv_Con_dat()      클라이언트 로부터 데이터 소켓을 전달받는 함수
+                Recv_input_data()   클라이언트 로부터 입력 데이터를 받는 함수
+                Recv_check_state()  클라이언트로부터 실시간으로 게임 상태를 확인하도록 요청 받아 확인하는 함수
+
         수신
-            Send_Con_dat()      클라이언트 에 데이터 소켓을 전달하는 함수
-            Send_draw_data()    서버에서 Update 처리한 데이터를 클라이언트에 보내는 함수 
-            send_check()        2명의 player의 상태를 보내는 함수
+
+                Send_Con_dat()      클라이언트 에 데이터 소켓을 전달하는 함수
+                Send_draw_data()    서버에서 Update 처리한 데이터를 클라이언트에 보내는 함수 
+                send_check()        2명의 player의 상태를 보내는 함수
+
         처리
-            Change_status()     게임의 상태를 play, wait, end 로 바꿔주는 함수   
-	        Check_player()      2명의 player가 서버와 연결되어 준비상태인지 확인하는 함수
-            Update()            입력 받은 데이터를 확인해 최신화 하는 함수
-            Check_state()       게임의 진행 상황을 서버가 확인하도록 요청하는 함수
-            Timeout()           일정시간 안에 입력 데이터의 전송이 되지 않고 지연 시 False로 처리하는 함수 
+
+                Change_status()     게임의 상태를 play, wait, end 로 바꿔주는 함수   
+                Check_player()      2명의 player가 서버와 연결되어 준비상태인지 확인하는 함수
+                Update()            입력 받은 데이터를 확인해 최신화 하는 함수
+                Check_state()       게임의 진행 상황을 서버가 확인하도록 요청하는 함수
+                Timeout()           일정시간 안에 입력 데이터의 전송이 되지 않고 지연 시 False로 처리하는 함수 
 
     + 변수 정의
         * ***추가요***
